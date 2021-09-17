@@ -16,10 +16,10 @@ class MoviesGroup extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 24),
+          const SizedBox(height: 24),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
             ),
@@ -30,7 +30,7 @@ class MoviesGroup extends StatelessWidget {
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: 10,
-              itemBuilder: (context, index) => MovieCard(),
+              itemBuilder: (context, index) => const MovieCard(),
             ),
           ),
         ],

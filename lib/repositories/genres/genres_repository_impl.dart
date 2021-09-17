@@ -30,7 +30,7 @@ class GenresRepositoryImpl implements GenresRepository {
     });
 
     if (result.hasError) {
-      print(result.statusText);
+      // print(result.statusText);
       throw Exception('Erro ao buscar Genres');
     }
 

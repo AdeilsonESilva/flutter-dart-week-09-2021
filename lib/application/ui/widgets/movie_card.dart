@@ -6,8 +6,7 @@ class MovieCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // padding: const EdgeInsets.all(8),
+    return SizedBox(
       width: 158,
       height: 280,
       child: Stack(
