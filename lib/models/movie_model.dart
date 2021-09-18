@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class MovieModel {
-  final String id;
+  final int id;
   final String title;
   final String releaseDate;
   final String posterPath;
@@ -30,10 +30,10 @@ class MovieModel {
 
   factory MovieModel.fromMap(Map<String, dynamic> map) {
     return MovieModel(
-      id: map['id'].toString(),
+      id: map['id'] ?? 0,
       title: map['title'] ?? '',
       releaseDate: map['release_date'] ?? '',
-      posterPath: 'https://image.tmdb.org/t/p/w200${map['poster_path']}',
+      posterPath: 'https://image.tmdb.org/t/p/w200${map['poster_path'] ?? ''}',
       genres: List<int>.from(map['genre_ids'] ?? const []),
       favorite: map['favorite'] ?? false,
     );
